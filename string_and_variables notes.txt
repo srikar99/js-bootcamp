@@ -1,0 +1,50 @@
+differences between let/const and var
+
+1: let/const doesn't allow hoisting, var does
+2: let/const doesn't allow to redeclare variables, var does
+    e.g., var a = 10; var a = 10; is allowed, let a = 10; let a = 10 is not allowed           
+3: var is function scoped, where as let/const are block scoped
+
+strings
+
+strings can be created using '' or ""
+
+concatenating strings:
+
+using + operator: if we use + operator, then, if any one of them is string, everything else
+is converted to string
+
+using ` to create string
+this is called template literal, this is better way to create strings which have
+dynamic values in string
+
+more uses of template literal
+
+issues with using ' or " in strings
+e.g., 
+'I'm a string' => invalid
+"String "with another string"" => invalid
+
+there are 2 ways to fix this, either escape character using \ or use ' with " or vice versa
+
+"I'm a string" => valid
+'String "with another string"' => valid
+
+'I\'m a string' => valid
+"String \"with another string\"" => valid
+
+since all of these are cumbersome, easier way is to use template literal
+
+`I'm a string` => valid
+`String "with another string"` => valid
+
+another use of template literal is text spanning multiple lines
+
+
+string interpolation: this is the process of evaluating js expression and converting it to a string
+e.g.,
+const weight = 150;
+const moonWeight = `You weigh ${weight * 0.165} on the moon`;
+
+${weight * 0.165} is evaluated as js expression, which will be equal to 24.75
+and converted to a string

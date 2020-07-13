@@ -1,0 +1,30 @@
+types:
+
+primitive types: string, number, boolean, null, undefined, symbol
+everything else is object types
+
+there are 2 types of conversion in JS
+explicit conversion
+
+e.g.,
+
+console.log(Boolean(42)) // prints true
+console.log(String(42)) // prints "42"
+
+implicit conversion
+
+JS automatically converts data types if they are not naturally compatible
+this is called coersion
+
+console.log('1' * '2'); // prints 2
+
+
+truthy and falsy in JS
+falsy vals in JS
+
+false
+0
+''
+null
+undefined
+NaN
